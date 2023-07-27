@@ -18,13 +18,13 @@ public class Main {
             switch (opcao) {
                 case 1:
                     resgate();
-                    return;
+                    continue;
                 case 2:
                     deposito();
-                    break;
+                    continue;
                 case 3:
                     visualizar();
-                    break;
+                    continue;
                 case 4:
                     exibirsaldo();
                     break;
@@ -52,19 +52,19 @@ public class Main {
 
     }
     public static void deposito() {
-        System.out.println("Menu" + "\n");
+        System.out.println("Deposito" + "\n");
     }
     public static void visualizar() {
-        System.out.println("Menu" + "\n");
+        System.out.println("Visualizar Dados da Conta" + "\n");
     }
     public static void exibirsaldo() {
-        System.out.println("Menu" + "\n");
+        System.out.println("Saldo" + "\n");
     }
     public static void investimento() {
-        System.out.println("Menu" + "\n");
+        System.out.println("Investimento" + "\n");
     }
     public static void bonus() {
-        System.out.println("Menu" + "\n");
+        System.out.println("Bonus" + "\n");
     }
 
       /*  Conta cliente = new Conta("Nome do Cliente", 100);
