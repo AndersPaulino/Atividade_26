@@ -17,22 +17,22 @@ public class Main {
 
             switch (opcao) {
                 case 1:
-                    realizarResgate();
-                    break;
+                    resgate();
+                    return;
                 case 2:
-                    realizarDeposito();
+                    deposito();
                     break;
                 case 3:
-                    visualizarDadosDaConta();
+                    visualizar();
                     break;
                 case 4:
-                    exibirSaldo();
+                    exibirsaldo();
                     break;
                 case 5:
-                    realizarInvestimento();
+                    investimento();
                     break;
                 case 6:
-                    receberBonus();
+                    bonus();
                     break;
                 case 0:
                     System.out.println("Saindo do programa...");
@@ -47,6 +47,25 @@ public class Main {
     public static void menu() {
         System.out.println("Menu" + "\n");
     }
+    public static void resgate() {
+        System.out.println("Resgate" + "\n");
+
+    }
+    public static void deposito() {
+        System.out.println("Menu" + "\n");
+    }
+    public static void visualizar() {
+        System.out.println("Menu" + "\n");
+    }
+    public static void exibirsaldo() {
+        System.out.println("Menu" + "\n");
+    }
+    public static void investimento() {
+        System.out.println("Menu" + "\n");
+    }
+    public static void bonus() {
+        System.out.println("Menu" + "\n");
+    }
 
       /*  Conta cliente = new Conta("Nome do Cliente", 100);
 
@@ -58,4 +77,3 @@ public class Main {
 
         System.out.println("Saldo atual: " + cliente.getSaldoDisponivel());*/
     }
-}
