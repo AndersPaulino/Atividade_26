@@ -38,10 +38,4 @@ public class Conta {
             System.out.println("Saldo insuficiente para realizar o resgate.");
         }
     }
-
-    public double getSaldoDisponivel() {
-        // Simulando investimentos com um rendimento de 5% ao mês
-        double rendimentoMensal = saldo * 0.05;
-        return saldo + rendimentoMensal;
-    }
 }

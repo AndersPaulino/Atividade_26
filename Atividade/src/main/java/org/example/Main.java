@@ -27,10 +27,7 @@ public class Main {
                     visualizar();
                     break;
                 case 4:
-                    investimento();
-                    break;
-                case 5:
-                    bonus();
+                    investimentoBonus();
                     break;
                 case 0:
                     System.out.println("Saindo do programa...");
@@ -48,8 +45,7 @@ public class Main {
         System.out.println("1 - Resgate");
         System.out.println("2 - Depósito");
         System.out.println("3 - Visualizar Dados da Conta");
-        System.out.println("4 - Investimento");
-        System.out.println("5 - Bônus");
+        System.out.println("4 - Investimento e Bonus");
         System.out.println("0 - Sair");
         System.out.println("Digite o número da opção desejada:");
     }
@@ -85,12 +81,16 @@ public class Main {
         System.out.println("Saldo: " + cliente.getSaldo());
     }
 
-    public static void investimento() {
-        System.out.println("Investimento");
+    public static void investimentoBonus() {
+        System.out.println("Investimento e Bonus");
+        System.out.println("Bonus: 5% a cada investimento");
+        Scanner scanner = new Scanner(System.in);
 
-    }
+        System.out.println("Digite o Valor para investir");
+        double valor = scanner.nextDouble() * 0.05 + cliente.getSaldo();
 
-    public static void bonus() {
-        System.out.println("Bônus");
+        cliente.setSaldo(valor);
+
+        System.out.println("Depósito efetuado com sucesso!");
     }
 }
