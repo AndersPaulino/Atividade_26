@@ -8,10 +8,12 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
-        int opcao = 0;
+        Conta cliente = new Conta("Anonimo", 100);
 
-        while (opcao == 0){
+        Scanner scanner = new Scanner(System.in);
+        int opcao = 1;
+
+        while (opcao > 0){
             menu();
             opcao = scanner.nextInt();
 
@@ -40,7 +42,7 @@ public class Main {
                 default:
                     System.out.println("Opção inválida. Tente novamente.");
             }
-        };
+        }
 
         scanner.close();
     }
