@@ -27,12 +27,9 @@ public class Main {
                     visualizar();
                     break;
                 case 4:
-                    exibirsaldo();
-                    break;
-                case 5:
                     investimento();
                     break;
-                case 6:
+                case 5:
                     bonus();
                     break;
                 case 0:
@@ -51,15 +48,22 @@ public class Main {
         System.out.println("1 - Resgate");
         System.out.println("2 - Depósito");
         System.out.println("3 - Visualizar Dados da Conta");
-        System.out.println("4 - Exibir Saldo");
-        System.out.println("5 - Investimento");
-        System.out.println("6 - Bônus");
+        System.out.println("4 - Investimento");
+        System.out.println("5 - Bônus");
         System.out.println("0 - Sair");
         System.out.println("Digite o número da opção desejada:");
     }
 
     public static void resgate() {
         System.out.println("Resgate");
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o valor a ser Resgatado: ");
+        double valor = scanner.nextDouble();
+
+        cliente.resgatar(valor);
+
+        System.out.println("Resgate efetuado com sucesso!");
 
     }
 
@@ -70,7 +74,7 @@ public class Main {
         System.out.print("Digite o valor a ser depositado: ");
         double valor = scanner.nextDouble();
 
-        cliente.depositar(valor); // Supondo que a classe Conta tenha um método depositar() para adicionar o valor à conta
+        cliente.depositar(valor);
 
         System.out.println("Depósito efetuado com sucesso!");
     }
@@ -78,11 +82,6 @@ public class Main {
     public static void visualizar() {
         System.out.println("Visualizar Dados da Conta");
         System.out.println("Nome do Cliente: " + cliente.getNome());
-        System.out.println("Saldo: " + cliente.getSaldo());
-    }
-
-    public static void exibirsaldo() {
-        System.out.println("Saldo");
         System.out.println("Saldo: " + cliente.getSaldo());
     }
 
